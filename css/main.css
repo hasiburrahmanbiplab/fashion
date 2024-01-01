@@ -1,0 +1,413 @@
+/* ~common css start */
+:root{
+    --font-family:'Inter', sans-serif;
+    --white:#ffff;
+    --primary:#151112;
+    --f-text:#CCCCCC;
+    --p-text:#777777;
+    --input-color:#A9A9A9;
+}
+body{
+    font-family:'Inter', sans-serif; 
+}
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+ul, ol{
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+img{
+    vertical-align: middle;
+    object-fit: cover;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+li{
+    display: inline-block;
+}
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+.w-100{
+    width: 100%;
+}
+.form-control:focus {
+	box-shadow: none;
+    border:1px solid transparent !important;
+    border-color: none;
+}
+.form-control{
+    border: 1px solid transparent;
+}
+/* ~common css End */
+/* ~banner part start */
+#banner{
+    background: url(../image/main-banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+}
+.b-text{
+    top: 18%;
+    left: 0;
+}
+.banner-text h1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 160px;
+    position: relative;
+}
+.banner-text h1::after{
+    content: "summer 2023";
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -40px;
+    color: red;
+    font-style: italic;
+    font-weight: 400;
+    font-family: 'Whisper', cursive;
+    font-size: 120px;
+}
+#banner .overly ul li img{
+    width:140px;
+}
+.edit-offcanvas{
+    height: 550px;
+}
+/* ~banner part End */
+/* ~navbar part start */
+.main-navbar .edit-link{
+    font-size: 12px !important;
+    font-family: var(--font-family);
+    border-bottom: 1px solid transparent;
+    transition: all linear 0.2s;
+    padding: 0px !important;
+}
+.main-navbar .edit-link:hover{
+    transition: all linear 0.3s;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+.navbar-icon ul li a{
+    color: rgb(0, 0, 0);
+}
+.navbar-icon ul li{
+    width: 30px;
+    height: 30px;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 1px solid var(--white);
+    outline-offset: 3px;
+    border-radius: 50%;
+}
+.navbar-icon ul li:hover{
+    background: black;
+    outline: 1px solid black;
+}
+.navbar-icon ul li:hover a{
+    color: var(--white) !important;
+}
+/* ~navbar part end */
+/* ~featured part start */
+.featured-content .heading h4{
+    font-family: var(--font-family);
+    letter-spacing: 3px;
+    font-size: 18px;
+}
+.card-box .card .overly{
+   width: 100%;
+   height: 70px;
+   opacity: 0;
+   right: 0;
+   bottom: 120px;
+   visibility: hidden;
+   overflow: hidden;
+   transition: ease-in-out 0.3s;
+}
+.card-box .card .overly span{
+    font-size: 14px !important;
+ }
+.card-box .card:hover .overly{
+    bottom: 79px;
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+    transition: ease-in-out 0.3s;
+}
+.card-box .card:hover .overly .box{
+    display: flex;
+    flex-direction: row;
+}
+/* ~featured part End */
+/* ~collection part start */
+.collection-text h2{
+    font-size: 60px;
+}
+.collection-text p{
+    font-family: var(--font-family);
+}
+.common-btn{
+    width: 170px;
+    position: relative;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all linear 0.3s;
+    overflow: hidden;
+}
+.common-btn::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    left: 0;
+    top: 0;
+    z-index: -2;
+    transition: all linear 0.3s;
+    border-radius: 10px;
+}
+.common-btn button{
+    transition: all linear 0.3s;
+}
+.common-btn:hover::before{
+    width: 100%;
+    transition: all linear 0.3s;
+}
+.common-btn:hover button{
+    color: var(--white) !important;
+    transition: all linear 0.5s;
+}
+.common-btn:hover .btn-arrow{
+    color:var(--white);
+    transition: all linear 0.4s;
+}
+/* ~collection part End */
+/* ~fashion part start */
+#fashion{
+     padding-top: 50px;
+}
+.fashion-image .overly{
+    width: 40%;
+    z-index: 1;
+}
+.fashion-btn:hover .btn-arrow{
+    transform: translateX(4px);
+    transition: all linear 0.4s;
+} 
+/* ~fashion part End */
+/* ~our journal part start */
+.journal-image .card-body h5{
+    font-size: 12px;
+}
+.journal-image .card-body p{
+    font-size: 16px;
+}
+/* ~our journal part end */
+/* ~discount part start */
+.discount-part{
+    max-width: 600px;
+    margin:  0 auto;
+}
+.discount-part .part-2{
+    background: var(--white);
+}
+.discount-part .part-2 input{
+    max-width: 350px;
+    border: 1px solid var(--p-text);
+}
+.discount-part .part-2 a{
+    width: 150px;
+}
+.part-2 input::placeholder{
+    color: var(--input-color);
+}
+/* ~discount part End */
+/* ~footer part start */
+#footer{
+    background: var(--primary);
+}
+.footer-main ul li{
+    display: block;
+}
+.footer-main ul li a{
+    border-bottom: 1px solid transparent;
+}
+.footer-main ul li a:hover{
+    border-bottom: 1px solid rgb(255, 255, 255) ;
+}
+#footer .gloria ul li a{
+    width: 35px;
+    height: 35px; 
+    background: var(--white);
+    outline: 1px solid var(--white);
+    outline-offset: 3px;
+    border: none;
+} 
+#footer .gloria ul li a:hover{
+    background: black;
+    color:var(--white) !important;
+}
+.copyright-part a{
+    color:rgb(255, 230, 0) !important;
+}   
+/* ~footer part End */
+@media (min-width:1400px) {
+    #banner{
+        height: 750px;
+    }
+    .main-navbar .edit-link{
+        font-size: 14px !important;
+        font-family: var(--font-family);
+    }
+    .b-text{
+        top: 26%;
+        left: 0;
+    }
+    .fashion-content .basic-shoes{
+        transform: translateY(-80px);
+    }
+     .collection-text h2 {
+        font-size: 75px;
+    }
+    .fashion-image .overly {
+        width: 40%;
+    }
+    .fashion-end-text{
+        width: 50% !important;
+    }
+    #footer .gloria ul{
+        width: 100%;
+    }
+}
+@media (min-width:1200px) and (max-width:1399.99px) {
+    #banner{
+        height: 700px;
+    }
+    .main-navbar .edit-link{
+        font-size: 14px !important;
+        font-family: var(--font-family);
+    }
+    .b-text{
+        top: 26%;
+        left: 0;
+    }
+    .journal-image .card{
+        height: 100%;
+    }
+     .collection-text h2 {
+        font-size: 75px;
+    }
+    .fashion-content .basic-shoes{
+        transform: translateY(-70px);
+    }
+    .fashion-image .overly {
+        width: 50%;
+    }
+    .fashion-end-text{
+        width: 50% !important;
+    }
+    #footer .gloria ul{
+        width: 100%;
+    }
+}
+@media (min-width:992px) and (max-width:1199.99px) {
+    .card-box .card .overly{
+        width: 100%;
+     }
+     .fashion-image .overly {
+        width: 58%;
+    }
+    .fashion-content .basic-shoes{
+        transform: translateY(-80px);
+    }
+    #footer .gloria ul{
+        width: 100%;
+    }
+    #footer .gloria ul li a{
+        width: 36px;
+        height: 36px; 
+        font-size: 20px !important;
+    }
+}
+@media (min-width:576px) and (max-width:767.99px) {
+    #banner{
+        height: 400px;
+    }
+     .fashion-image .overly {
+        width: 50%;
+    }
+    .fashion-end-text{
+        width: 90% !important;
+    }
+}
+@media (max-width:575px) {
+    .offcanvas-body .main-navbar .navbar-icon ul{
+        width: 80% !important;
+    }
+    .banner-text h1{
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 100px;
+        position: relative;
+    }
+    .banner-text h1::after{
+        content: "summer 2023";
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: -15px;
+        color: red;
+        font-style: italic;
+        font-weight: 400;
+        font-family: 'Whisper', cursive;
+        font-size: 70px;
+    }
+    #banner{
+        height: 280px;
+        background-position: left;
+    }
+    #banner .overly ul li img{
+        width: 70px;
+    }
+    /* collection part start */
+     .collection-text{
+        max-width: 100%;
+     }
+     .collection-text h2{
+        width: 100%;
+     }
+     .collection-text p{
+        width: 100%;
+     }
+    #footer .gloria ul{
+        width: 270px;
+    }
+     .fashion-image img{
+        width: 70% !important;
+     }
+     .fashion-image .overly {
+        width: 50%;
+        left: -10px;
+    }
+    .gloria p{
+        width: 95%;
+    }
+}
+@media (max-width:991px) {
+    .main-navbar .edit-link{
+        border-bottom: none;
+    }
+    .main-navbar .edit-link:hover{
+        border-bottom: none;
+    }
+}
